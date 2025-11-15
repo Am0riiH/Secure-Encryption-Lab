@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secure Encryption Lab</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="icon" type="image/png" href="padlock.png"> 
+
+</head>
+<body>
+
+<div class="app-container">
+
+    <h1>Secure Encryption Lab</h1>
+    <p class="subtitle">Multi-Algorithm Encryption, Decryption & Analysis Tool</p>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="encrypt">Encrypt</button>
+        <button class="tab" data-tab="decrypt">Decrypt</button>
+        <button class="tab" data-tab="analyzer">Analyzer</button>
+    </div>
+
+    <div class="tab-content active" id="encrypt">
+        <h2>Encrypt Data</h2>
+
+        <label>Enter text to encrypt</label>
+        <textarea id="enc-input"></textarea>
+
+        <label>Select encryption type</label>
+        <select id="enc-type">
+            <option value="aes-gcm">AES-GCM (Recommended)</option>
+            <option value="aes-cbc">AES-CBC</option>
+            <option value="base64-enc">Base64 Encode</option>
+            <option value="rot13-enc">ROT13 Encode</option>
+            <option value="url-enc">URL Encode</option>
+            <option value="xor">XOR Cipher</option>
+            <option value="caesar">Caesar Cipher</option>
+            <option value="sha256">SHA-256 (Hash)</option>
+        </select>
+
+        <button id="encrypt-btn">ENCRYPT</button>
+
+        <label>Encrypted output</label>
+        <textarea id="enc-output" readonly></textarea>
+
+        <button id="copy-enc-output">Copy Result</button>
+    </div>
+    <div id="toast" class="toast">Copied to clipboard ✓</div>
+
+
+    <div class="tab-content" id="decrypt">
+        <h2>Decrypt Data</h2>
+
+        <label>Paste encrypted text</label>
+        <textarea id="dec-input"></textarea>
+
+        <label>Select encryption type</label>
+        <select id="dec-type">
+            <option value="aes-gcm">AES-GCM</option>
+            <option value="aes-cbc">AES-CBC</option>
+            <option value="base64-dec">Base64 Decode</option>
+            <option value="rot13-dec">ROT13 Decode</option>
+            <option value="url-dec">URL Decode</option>
+            <option value="xor">XOR Cipher</option>
+            <option value="caesar">Caesar Cipher</option>
+        </select>
+
+        <button id="decrypt-btn">DECRYPT</button>
+
+        <label>Decrypted output</label>
+        <textarea id="dec-output" readonly></textarea>
+
+        <p id="dec-status" class="status-msg"></p>
+    </div>
+
+    <div class="tab-content" id="analyzer">
+        <h2>String Analyzer</h2>
+
+        <label>Enter string to analyze</label>
+
+        <textarea id="analyze-input"></textarea>
+
+        <button id="analyze-btn">ANALYZE</button>
+
+        <div id="analysis-result" class="analysis-box">
+        </div>
+    </div>
+
+</div>
+<footer class="signature">
+    <span class="glow-soft">© 2025 — Developed by Omar Rashied</span>
+</footer>
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<!--Omar Rashied-->
