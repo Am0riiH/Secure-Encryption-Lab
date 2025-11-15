@@ -105,7 +105,7 @@ This allows consistent encryption/decryption for demo and academic use, while st
 ```text
 .
 ├── index.html      # Main UI (Encrypt / Decrypt / Analyzer)
-├── padlock.png 
+├── padlock.png     # icon 
 ├── style.css       # Dark themed styling and layout
 └── script.js       # Core logic: crypto, analyzer, UI events
 
