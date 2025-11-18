@@ -1,0 +1,248 @@
+/* ====== GLOBAL STYLE ====== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0c0f22, #1b2141);
+    color: #fff;
+}
+
+/* ====== MAIN CONTAINER ====== */
+.app-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* ====== TITLES ====== */
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b8c6ff;
+    margin-bottom: 25px;
+}
+
+/* ====== TABS ====== */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.tab {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #dce1ff;
+    font-size: 14px;
+}
+
+.tab.active {
+    background: #4d6bff;
+    color: #fff;
+}
+
+/* ====== FORM ELEMENTS ====== */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #cfd7ff;
+}
+
+textarea,
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 14px;
+    resize: none;
+}
+
+textarea {
+    height: 110px;
+}
+
+/* Dropdown */
+select {
+    appearance: none;
+    background: rgba(255,255,255,0.08);
+    color:white;
+    border-radius:10px;
+}
+
+select option {
+    background: #0f152e;
+    color: white;
+}
+
+/* ====== BUTTONS ====== */
+button {
+    padding: 12px 20px;
+    background: #4d6bff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #2e49d6;
+}
+
+/* Special Buttons */
+#copy-enc-output,
+#analyze-btn {
+    background: #11bba3;
+    margin-bottom: 25px;
+}
+
+#copy-enc-output:hover,
+#analyze-btn:hover {
+    background: #0d8f78;
+}
+
+/* ====== ANALYSIS BOX ====== */
+.analysis-box {
+    background: rgba(0, 0, 0, 0.25);
+    border-left: 5px solid #4d6bff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* ====== TOAST ====== */
+.toast {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: linear-gradient(135deg, #1a2337, #1e2a45);
+    color: #b6c9ff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 12px rgba(90,120,255,0.35);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.35s ease;
+    pointer-events: none;
+    border: 1px solid rgba(120,150,255,0.3);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== SIGNATURE ====== */
+.signature {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 15px;
+}
+
+.glow-soft {
+    font-size: 14px;
+    color: #8fbaff;
+    opacity: 0.75;
+    letter-spacing: 0.8px;
+    text-shadow: 
+        0 0 3px rgba(143,186,255,0.5),
+        0 0 6px rgba(143,186,255,0.25);
+}
+
+/* ===================================================== */
+/* === PERFECT MOBILE RESPONSIVE (IPHONE + ANDROID) ==== */
+/* ===================================================== */
+
+@media (max-width: 600px) {
+
+    .app-container {
+        width: 95% !important;
+        margin: 15px auto !important;
+        padding: 18px !important;
+        border-radius: 16px !important;
+    }
+
+    h1 {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .subtitle {
+        font-size: 13px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .tabs {
+        gap: 6px !important;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        border-radius: 8px !important;
+    }
+
+    label {
+        font-size: 13px !important;
+        margin: 10px 0 4px !important;
+    }
+
+    textarea, input, select {
+        font-size: 13px !important;
+        padding: 10px !important;
+        border-radius: 8px !important;
+        margin-bottom: 10px !important;
+    }
+
+    textarea {
+        height: 90px !important;
+    }
+
+    button {
+        padding: 10px 13px !important;
+        font-size: 13px !important;
+        border-radius: 10px !important;
+        margin-top: 8px !important;
+    }
+
+    #copy-enc-output,
+    #analyze-btn {
+        font-size: 13px !important;
+        padding: 10px !important;
+    }
+
+    .analysis-box {
+        padding: 14px !important;
+        border-left-width: 4px !important;
+        font-size: 13px !important;
+    }
+
+    .signature {
+        font-size: 10px !important;
+        margin-top: 30px !important;
+    }
+}
+
+/* Omar Rashied */
